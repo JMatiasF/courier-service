@@ -53,6 +53,34 @@
               }
             }
           },
+          "401": {
+            "description": "Bearer ausente, inválido o vencido",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            },
+            "headers": {
+              "WWW-Authenticate": {
+                "schema": {
+                  "type": "string"
+                },
+                "example": "Bearer"
+              }
+            }
+          },
+          "403": {
+            "description": "Rol o pertenencia insuficientes",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
           "409": {
             "description": "Conflicto",
             "content": {
@@ -75,34 +103,6 @@
           },
           "500": {
             "description": "Error interno",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ApiError"
-                }
-              }
-            }
-          },
-          "401": {
-            "description": "Bearer ausente, inválido o vencido",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ApiError"
-                }
-              }
-            },
-            "headers": {
-              "WWW-Authenticate": {
-                "schema": {
-                  "type": "string"
-                },
-                "example": "Bearer"
-              }
-            }
-          },
-          "403": {
-            "description": "Rol o pertenencia insuficientes",
             "content": {
               "application/json": {
                 "schema": {
@@ -157,16 +157,6 @@
               }
             }
           },
-          "500": {
-            "description": "Error interno",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ApiError"
-                }
-              }
-            }
-          },
           "401": {
             "description": "Bearer ausente, inválido o vencido",
             "content": {
@@ -187,6 +177,16 @@
           },
           "403": {
             "description": "Rol o pertenencia insuficientes",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Error interno",
             "content": {
               "application/json": {
                 "schema": {
@@ -237,26 +237,6 @@
               }
             }
           },
-          "404": {
-            "description": "Repartidor inexistente",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ApiError"
-                }
-              }
-            }
-          },
-          "500": {
-            "description": "Error interno",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ApiError"
-                }
-              }
-            }
-          },
           "401": {
             "description": "Bearer ausente, inválido o vencido",
             "content": {
@@ -277,6 +257,26 @@
           },
           "403": {
             "description": "Rol o pertenencia insuficientes",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Repartidor inexistente",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Error interno",
             "content": {
               "application/json": {
                 "schema": {
@@ -338,6 +338,34 @@
               }
             }
           },
+          "401": {
+            "description": "Bearer ausente, inválido o vencido",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            },
+            "headers": {
+              "WWW-Authenticate": {
+                "schema": {
+                  "type": "string"
+                },
+                "example": "Bearer"
+              }
+            }
+          },
+          "403": {
+            "description": "Rol o pertenencia insuficientes",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
           "404": {
             "description": "Repartidor inexistente",
             "content": {
@@ -370,34 +398,6 @@
           },
           "500": {
             "description": "Error interno",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ApiError"
-                }
-              }
-            }
-          },
-          "401": {
-            "description": "Bearer ausente, inválido o vencido",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ApiError"
-                }
-              }
-            },
-            "headers": {
-              "WWW-Authenticate": {
-                "schema": {
-                  "type": "string"
-                },
-                "example": "Bearer"
-              }
-            }
-          },
-          "403": {
-            "description": "Rol o pertenencia insuficientes",
             "content": {
               "application/json": {
                 "schema": {
@@ -459,6 +459,34 @@
               }
             }
           },
+          "401": {
+            "description": "Bearer ausente, inválido o vencido",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            },
+            "headers": {
+              "WWW-Authenticate": {
+                "schema": {
+                  "type": "string"
+                },
+                "example": "Bearer"
+              }
+            }
+          },
+          "403": {
+            "description": "Rol o pertenencia insuficientes",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
           "404": {
             "description": "Repartidor inexistente",
             "content": {
@@ -481,34 +509,6 @@
           },
           "500": {
             "description": "Error interno",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ApiError"
-                }
-              }
-            }
-          },
-          "401": {
-            "description": "Bearer ausente, inválido o vencido",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ApiError"
-                }
-              }
-            },
-            "headers": {
-              "WWW-Authenticate": {
-                "schema": {
-                  "type": "string"
-                },
-                "example": "Bearer"
-              }
-            }
-          },
-          "403": {
-            "description": "Rol o pertenencia insuficientes",
             "content": {
               "application/json": {
                 "schema": {
@@ -576,26 +576,6 @@
               }
             }
           },
-          "404": {
-            "description": "Repartidor inexistente",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ApiError"
-                }
-              }
-            }
-          },
-          "500": {
-            "description": "Error interno",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ApiError"
-                }
-              }
-            }
-          },
           "401": {
             "description": "Bearer ausente, inválido o vencido",
             "content": {
@@ -616,6 +596,26 @@
           },
           "403": {
             "description": "Rol o pertenencia insuficientes",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Repartidor inexistente",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Error interno",
             "content": {
               "application/json": {
                 "schema": {
@@ -678,6 +678,34 @@
               }
             }
           },
+          "401": {
+            "description": "Bearer ausente, inválido o vencido",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            },
+            "headers": {
+              "WWW-Authenticate": {
+                "schema": {
+                  "type": "string"
+                },
+                "example": "Bearer"
+              }
+            }
+          },
+          "403": {
+            "description": "Rol o pertenencia insuficientes",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
           "404": {
             "description": "Repartidor o cuenta inexistente",
             "content": {
@@ -718,6 +746,16 @@
               }
             }
           },
+          "500": {
+            "description": "Error interno",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
           "502": {
             "description": "Respuesta de security incompatible, redirección o 401/403 inesperado",
             "content": {
@@ -730,44 +768,6 @@
           },
           "503": {
             "description": "Security no disponible, timeout, 429 o 5xx",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ApiError"
-                }
-              }
-            }
-          },
-          "500": {
-            "description": "Error interno",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ApiError"
-                }
-              }
-            }
-          },
-          "401": {
-            "description": "Bearer ausente, inválido o vencido",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ApiError"
-                }
-              }
-            },
-            "headers": {
-              "WWW-Authenticate": {
-                "schema": {
-                  "type": "string"
-                },
-                "example": "Bearer"
-              }
-            }
-          },
-          "403": {
-            "description": "Rol o pertenencia insuficientes",
             "content": {
               "application/json": {
                 "schema": {
@@ -816,26 +816,6 @@
               }
             }
           },
-          "404": {
-            "description": "Repartidor inexistente",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ApiError"
-                }
-              }
-            }
-          },
-          "500": {
-            "description": "Error interno",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ApiError"
-                }
-              }
-            }
-          },
           "401": {
             "description": "Bearer ausente, inválido o vencido",
             "content": {
@@ -863,6 +843,26 @@
                 }
               }
             }
+          },
+          "404": {
+            "description": "Repartidor inexistente",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Error interno",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
           }
         },
         "x-roles": [
@@ -870,6 +870,53 @@
           "REPARTIDOR"
         ],
         "description": "Solo ADMIN. Devuelve repartidorId y usuarioId nullable sin llamar a security ni modificar datos. Asociación inmutable utilizada en la sincronización administrativa de autorización de shipment."
+      }
+    },
+    "/api/v1/admin/configuracion": {
+      "get": {
+        "tags": [
+          "Administración"
+        ],
+        "summary": "Consultar diagnóstico de configuración remota",
+        "description": "Solo ADMIN. Devuelve nombre de aplicación, perfiles activos y marcador no sensible de Config Server; nunca credenciales ni valores secretos.",
+        "operationId": "consultarConfiguracion",
+        "responses": {
+          "200": {
+            "description": "Diagnóstico de configuración",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ConfiguracionResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Token ausente o inválido",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "El usuario no tiene rol ADMIN",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ]
       }
     }
   },
@@ -1070,6 +1117,33 @@
               "null"
             ],
             "format": "uuid"
+          }
+        }
+      },
+      "ConfiguracionResponse": {
+        "type": "object",
+        "required": [
+          "aplicacion",
+          "perfilesActivos",
+          "marcador"
+        ],
+        "properties": {
+          "aplicacion": {
+            "type": "string",
+            "example": "courier-service"
+          },
+          "perfilesActivos": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "example": [
+              "dev"
+            ]
+          },
+          "marcador": {
+            "type": "string",
+            "description": "Identificador no sensible de la configuración cargada"
           }
         }
       }

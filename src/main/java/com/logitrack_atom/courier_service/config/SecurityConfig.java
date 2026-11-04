@@ -66,6 +66,7 @@ public class SecurityConfig {
                 .authorizeHttpRequests(auth -> auth
                         .dispatcherTypeMatchers(DispatcherType.ERROR).permitAll()
                         .requestMatchers(HttpMethod.GET, "/actuator/health").permitAll()
+                        .requestMatchers(HttpMethod.GET, "/api/v1/admin/configuracion").hasRole("ADMIN")
                         .requestMatchers(HttpMethod.GET, "/api/v1/repartidores",
                                 "/api/v1/repartidores/{id}/usuario").hasRole("ADMIN")
                         .requestMatchers(HttpMethod.GET, "/api/v1/repartidores/{id}",
