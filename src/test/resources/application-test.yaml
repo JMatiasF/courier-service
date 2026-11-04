@@ -8,3 +8,7 @@ spring:
 logitrack:
   config:
     marker: courier-service-test
+
+eureka:
+  client:
+    enabled: false

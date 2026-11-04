@@ -351,3 +351,23 @@ coordinan en shipment-service; una imagen local verificada no acredita su public
 `{"repartidorId":"UUID","usuarioId":null}` o la cuenta vinculada. Es una consulta
 sin efectos ni llamadas a security. Permite verificar la asociación antes de registrar
 una referencia de autorización en shipment; las respuestas de dominio no cambian.
+
+
+## Registro de courier-service en Eureka Server
+
+El proyecto ya incluye `spring-cloud-starter-netflix-eureka-client`. El nombre registrado es
+`courier-service` (configurado mediante `spring.application.name`).
+
+1. Iniciar Eureka Server y verificar su dashboard en `http://localhost:8761`.
+2. Para ejecutar el microservicio desde la computadora, establecer
+   `EUREKA_SERVER_URL=http://localhost:8761/eureka/` y `SPRING_PROFILES_ACTIVE=local`.
+3. Proporcionar también las variables obligatorias de MySQL y JWT descritas arriba.
+4. Iniciar el microservicio. En el dashboard debe aparecer `COURIER-SERVICE` bajo *Instances currently registered with Eureka*.
+
+En Docker Compose, el valor por defecto es `http://host.docker.internal:8761/eureka/`,
+para conectar al Eureka Server que se ejecuta en la máquina anfitriona.
+Si Eureka corre en la misma red Docker como servicio `eureka-server`, configurar
+`EUREKA_SERVER_URL=http://eureka-server:8761/eureka/` y asegurarse de compartir la red.
+Se puede desactivar el cliente con `EUREKA_CLIENT_ENABLED=false` en perfil local.
+Las pruebas con perfil `test` lo deshabilitan para no depender de Eureka.
+Para `dev` y `prod`, la URL también puede suministrarse mediante Config Server.

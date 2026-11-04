@@ -53,4 +53,6 @@ clients:
 
 eureka:
   client:
-    enabled: false
+    enabled: ${EUREKA_CLIENT_ENABLED:true}
+    register-with-eureka: true
+    fetch-registry: true
